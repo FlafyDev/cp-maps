@@ -1,16 +1,11 @@
 # cp-maps
 A command that displays a random map from Club Penguin in the terminal whenever called. 
-Uses the internet for now, so may be a bit slow..
 
 ## Usage
 ```
-cp-maps
-```
-or
-```
-cp-maps <file>
+cp-maps <directory of images>
 ```
 
-Nix package is wrapped with the `./maps.json`.
+Nix package is wrapped with the `./images` directory.
 
 ## Preview

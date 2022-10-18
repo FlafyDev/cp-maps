@@ -1,9 +1,4 @@
-file=${1:-maps.json}
-length=$(cat $file | jq length)
-index=$(($RANDOM % $length)) 
-name=$(cat $file | jq -r "keys | .[$index]")
-link=$(cat $file | jq -r ".\"${name}\"")
+dir=${1:-./images}
 
-# echo $link
-wget -q -O- $link | img2sixel
-# echo $name
+files=($dir/*)
+img2sixel "${files[RANDOM % ${#files[@]}]}"
